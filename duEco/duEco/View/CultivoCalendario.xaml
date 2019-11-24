@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="duEco.View.CultivoCalendario"
+             Title="¿Cuándo lo sembró?">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Transparent">
+            <!-- yyyy-dd-MM -->
+                <DatePicker x:Name="dpSiembra" BackgroundColor="#82BC75" Date="2019-11-10" MaximumDate="2022-12-31" MinimumDate="2019-01-01"></DatePicker>
+            
+            <Button Text="Confirmar" x:Name="btnConfirmar"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

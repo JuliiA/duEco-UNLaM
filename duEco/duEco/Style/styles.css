@@ -1,0 +1,12 @@
+﻿body {
+}
+
+stacklayout {
+    background-color: lightblue;
+}
+
+.btnHome{
+    border-radius:20px;
+    background-color:forestgreen;
+    color:white;
+}

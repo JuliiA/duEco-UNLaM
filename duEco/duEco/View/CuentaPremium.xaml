@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="duEco.View.CuentaPremium"
+             Title="Pasar a Premium">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout BackgroundColor="Transparent">
+            <Label Text="La version premium te brinda mas informacion para el manejo de tu huerta como ser plagas, remedios organicos, recomendaciones de contenedore, cultivos compatibles, etc" />
+                <Button Text="Actualizar" x:Name="btnActualizar"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

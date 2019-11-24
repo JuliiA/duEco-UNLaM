@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="duEco.View.MasterMenuPage">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Mi app" Icon="">
+            <ListView x:Name="ListMenu" ItemSelected="ListMenu_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell TextColor="DarkGreen" Text="{Binding Text}" Detail="{Binding Text}" DetailColor="Transparent">
+                            
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>

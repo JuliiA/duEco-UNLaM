@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="duEco.View.VerCultivo"
+             Title="Tareas a Realizar">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#539539"/>
+                <Setter Property="WidthRequest" Value="220"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Transparent">
+            <Label x:Name="NombreCultivo"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="" x:Name="lblFecha" TextColor="DarkOrange"/>
+            <Label Text="" x:Name="lblEstado" TextColor="DarkOrange"/>
+            <!-- Comienza listar Tareas-->
+            <StackLayout VerticalOptions="StartAndExpand">
+                <ListView ItemsSource="" BackgroundColor="Transparent" x:Name="lstTareas" RowHeight="100">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell Height="200">
+                                <StackLayout BackgroundColor="#ECFCF4" Margin="10,0">
+                                    <!--<StackLayout Orientation="Horizontal">-->
+                                    <Label Text="{Binding tareasEtapa }"/>
+                                    <Label Text="{Binding nombreEtapa}"/>
+                                     <!--</StackLayout>-->
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <!---->
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

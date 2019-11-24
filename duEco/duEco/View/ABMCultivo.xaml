@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="duEco.View.ABMCultivo"
+             Title="Elegir Cultivo">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#539539"/>
+                <Setter Property="WidthRequest" Value="220"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="Transparent">
+                <ListView ItemsSource="" BackgroundColor="Transparent" x:Name="lstPlantas" ItemSelected="OnSelection">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <!-- <ImageCell x:Name="icPlanta" Text="{Binding nombre}" Detail="{Binding id}" ImageSource="{Binding imagenPortada}" TextColor="White" DetailColor="WhiteSmoke"></ImageCell>-->
+                            <ViewCell>
+                                <StackLayout BackgroundColor="#ECFCF4"
+                        Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="{Binding imagenPortada}" x:Name="imagenPortada" MinimumWidthRequest="5" />
+                                        <Label Text="{Binding nombre}"/>
+                                        <Label Text="Dificultad" TextColor="Black" FontSize="Small" />
+                                        <Label Text="{Binding dificultad}" TextColor="#539539" FontSize="Micro" />
+                                        <!--<Label Text="{Binding id}" HorizontalOptions="EndAndExpand" TextColor="#F4A401" />-->
+                                        <Label x:Name="btnInfoPlanta" Text=">" WidthRequest="45" HeightRequest="45"
+                                             Font="Bold,15" Margin="0,0,0,5" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Button Text="Actualizar" x:Name="btnActualizar" />
+                <Button Text="Eliminar" x:Name="btnEliminar" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

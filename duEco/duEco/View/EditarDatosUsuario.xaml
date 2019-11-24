@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="duEco.View.EditarDatosUsuario"
+             Title="Editar">
+    <Page.Resources>
+    <ResourceDictionary>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="#539539"/>
+            <Setter Property="WidthRequest" Value="220"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="Medium"/>
+        </Style>
+    </ResourceDictionary>
+    </Page.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="Transparent">
+                <Label Text="Nombre Usuario " />
+                <Entry Placeholder="Nombre" x:Name="txtNombre"/>
+                <Label Text="Email " />
+                <Entry Placeholder="Email" x:Name="txtEmail"/>
+                <Label Text="Password " />
+                <Entry Placeholder="Password" x:Name="txtPassword" IsPassword="True"/>
+                <Button Text="Confirmar" x:Name="btnConfirmar" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

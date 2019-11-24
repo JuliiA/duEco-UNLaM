@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="duEco.View.ReconocerPlanta"
+             Title="Reconocer Planta">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="MediumSeaGreen"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BorderRadius" Value="20"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Padding="20" BackgroundColor="Transparent">
+            <Image Source="icon.png" x:Name="imgSource" 
+               MinimumHeightRequest="100" 
+               MinimumWidthRequest="100" 
+               HorizontalOptions="Center" />
+            <Button Text="Elige una foto" Clicked="Elegir_Click"></Button>
+            <!--<Button Text="Tomar una foto" Clicked="Tomar_Click"></Button>-->
+
+            <Button Text="Analizar" Clicked="Analizar_Click" BackgroundColor="LightSlateGray" TextColor="Black" ></Button>
+
+            <Label x:Name="Resultado" TextColor="DarkBlue"/>
+            <ProgressBar x:Name="Precision" BackgroundColor="ForestGreen" ProgressColor="White"/>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="duEco.View.Calendario"
+             xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"
+             Title="Calendario">
+            <Page.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Button">
+                        <Setter Property="BackgroundColor" Value="MediumSeaGreen"/>
+                        <Setter Property="TextColor" Value="White"/>
+                        <Setter Property="BorderRadius" Value="5"/>
+                    </Style>
+                </ResourceDictionary>
+            </Page.Resources>   
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout BackgroundColor="Transparent">
+                
+                <controls:Calendar x:Name="calCalendario" Padding="10,0,10,0" StartDay="Sunday" SelectedBorderWidth="4" DisabledBorderColor="Black" DateClicked="CalCalendario_DateClicked" />
+                
+                <Button x:Name="btnNuevaAlerta" Text="Nueva Alerta" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="BtnNuevaAlerta_Clicked"/>
+
+                <ListView ItemsSource="" BackgroundColor="Transparent" x:Name="lstAlertas" ItemSelected="LstAlertas_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout BackgroundColor="#ECFCF4" Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal" Padding="15,0" >
+                                        <Label Text="{Binding Descripcion}" BackgroundColor="Transparent" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

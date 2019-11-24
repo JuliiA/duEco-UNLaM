@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="duEco.View.VerPlanta"
+             Title="Informacion">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#539539"/>
+                <Setter Property="WidthRequest" Value="220"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            
+            <StackLayout BackgroundColor="AliceBlue">
+                    
+                <Image x:Name="ImagenPortada" />
+                <Label x:Name="NombrePlanta" TextColor="#539539" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                <Label Text="Descripcion" TextColor="Black" FontSize="Small" />
+                <Label x:Name="Descripcion" HorizontalOptions="EndAndExpand" TextColor="#F4A401" />
+
+                <Label Text="Dificultad" TextColor="Black" FontSize="Small" />
+                <Label x:Name="lblDificultad" HorizontalOptions="EndAndExpand" TextColor="#F4A401" />
+
+                <Label Text="Tipo de Siembra" TextColor="Black" FontSize="Small" />
+                <Label x:Name="lblTipoSiembra" HorizontalOptions="EndAndExpand" TextColor="#F4A401" />
+
+                <Label Text="Epoca de Siembra" TextColor="Black" FontSize="Small" />
+                <Label x:Name="lblEpoca" HorizontalOptions="EndAndExpand" TextColor="#F4A401" />
+
+                <Label Text="Distancia entre Plantas" TextColor="Black" FontSize="Small" />
+                <Label x:Name="lblDistancia" HorizontalOptions="EndAndExpand" TextColor="#F4A401" />
+
+                <Label Text="Valor Nutricional" TextColor="Black" FontSize="Small" />
+                <Label x:Name="lblValor" HorizontalOptions="EndAndExpand" TextColor="#F4A401" />
+                
+                <TableView Intent="Settings">
+                        <TableRoot>
+                            <TableSection Title="Mas Info">
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="" />
+                                        <Label Text="" TextColor="#032C5B" />
+                                        <Label Text="Active su cuenta Premium!" HorizontalOptions="EndAndExpand" TextColor="#75D0E3" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </TableSection>
+                        </TableRoot>
+                    </TableView>
+               
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

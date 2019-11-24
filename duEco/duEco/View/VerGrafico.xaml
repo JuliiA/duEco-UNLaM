@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             xmlns:local="clr-namespace:Microcharts.Samples.Forms"
+             x:Class="duEco.View.VerGrafico"
+             Title="Alertas por prioridad">
+
+            <microcharts:ChartView x:Name="chartView" Margin="20" ScaleX="0.9" ScaleY="0.9"/>
+    <!--<ContentPage.Content>
+        <StackLayout>
+            <Label Text="BarChart" FontSize="14" FontAttributes="Bold" TextColor="White"/>
+            
+        </StackLayout>
+    </ContentPage.Content>-->
+</ContentPage>

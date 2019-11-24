@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="duEco.View.ABMHuerta"
+             Title="Edicion Huerta">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#539539"/>
+                <Setter Property="WidthRequest" Value="220"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="Transparent">
+               
+                    <Label Text="" x:Name="IdHuerta" IsVisible="False" />
+                    <Entry Placeholder="Nombre" x:Name="NombreHuerta" />
+                    <Entry Placeholder="Descripcion" x:Name="DescHuerta" />
+                    <Button Text="Actualizar" x:Name="btnActualizar" />
+                    <!--<Button Text="Eliminar" x:Name="btnEliminar" />-->
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

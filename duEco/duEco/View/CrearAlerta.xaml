@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="duEco.View.CrearAlerta"
+             Title="Crear Alerta">
+            <Page.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Button">
+                        <Setter Property="BackgroundColor" Value="MediumSeaGreen"/>
+                        <Setter Property="TextColor" Value="White"/>
+                        <Setter Property="BorderRadius" Value="5"/>
+                    </Style>
+
+                    <Style TargetType="Label">
+                        <Setter Property="TextColor" Value="#539539"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                        <Setter Property="FontSize" Value="Medium"/>
+                    </Style>
+                </ResourceDictionary>
+            </Page.Resources>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Transparent">
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0">
+                                <Label x:Name="lblFechaAlerta"
+                                        Text="Fecha Alerta"               
+                                       VerticalOptions="CenterAndExpand" />
+                                <Label  x:Name="lblFecha"
+                                        Text=""
+                                        VerticalOptions="CenterAndExpand" 
+                                        HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0">
+                                <Label x:Name="lblHoraAlerta"
+                                        Text="Hora Alerta"                         
+                                        VerticalOptions="CenterAndExpand"/>
+                                <TimePicker x:Name="tmpHora"
+                                            VerticalOptions="CenterAndExpand" 
+                                            HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0">
+                                <Label x:Name="lblDescripcion"
+                                        Text="Descripción"                         
+                                        VerticalOptions="CenterAndExpand"/>
+                                <Entry  x:Name="txtDescripcion" 
+                                        Placeholder="(e.g. Regar Menta)" 
+                                        VerticalOptions="CenterAndExpand" 
+                                        HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0">
+                                <Label x:Name="lblNotificacion"
+                                        Text="Envía Notificación"                         
+                                        VerticalOptions="CenterAndExpand"/>
+                                <Switch x:Name="chkAvisa"
+                                        IsToggled="True" 
+                                        VerticalOptions="CenterAndExpand" 
+                                        HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0">
+                                <Label x:Name="lblTipoAlerta"
+                                        Text="Tipo de Alerta"                         
+                                        VerticalOptions="CenterAndExpand"/>
+                                <Picker x:Name="cmbTipoAlerta"
+                                        Title="(e.g. Fundamental)" 
+                                        VerticalOptions="CenterAndExpand" 
+                                        HorizontalOptions="EndAndExpand"
+                                        ItemDisplayBinding="{Binding Descripcion}"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0">
+                                <Label x:Name="lblHuerta"
+                                        Text="Seleccione Huerta"                         
+                                        VerticalOptions="CenterAndExpand"/>
+                                <Picker x:Name="cmbHuertas"
+                                        Title="(e.g. Aromáticas)" 
+                                        VerticalOptions="CenterAndExpand" 
+                                        HorizontalOptions="EndAndExpand"
+                                        ItemDisplayBinding="{Binding Nombre}"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout>
+                                <Button x:Name="btnCrearAlerta" 
+                                        Text="Confirmar" 
+                                        HorizontalOptions="Center" 
+                                        VerticalOptions="CenterAndExpand" 
+                                        Clicked="BtnCrearAlerta_Clicked"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

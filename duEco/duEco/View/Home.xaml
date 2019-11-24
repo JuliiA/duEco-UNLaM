@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="duEco.View.Home"
+             Title="Home">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="MediumSeaGreen"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BorderRadius" Value="20"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="Transparent">
+                
+                <!--<Label Text="Usuario " BackgroundColor="ForestGreen" TextColor="White"></Label>
+                <Entry Text="" x:Name="usLog"/>
+                <Button Text="Salir" BackgroundColor="DarkRed" x:Name="btnSalir" MinimumWidthRequest="1" MinimumHeightRequest="1"/>-->
+                
+                <Frame ClassId="frmMisHuertas" BackgroundColor="DarkGreen">
+                    <Button Text="MIS HUERTAS" x:Name="btnHuertas"/>
+                </Frame>
+                <Frame BackgroundColor="DarkGreen">
+                    <Button x:Name="btnCatalogo" Text="CATALOGO"/>
+                </Frame>
+                <Frame BackgroundColor="DarkGreen">
+                    <Button Text="RECONOCER PLANTA" x:Name="btnReconocer"/>
+                </Frame>
+                <Frame BackgroundColor="DarkGreen">
+                    <Button Text="CALENDARIO" x:Name="btnCalendario" />
+                </Frame>
+                <Frame BackgroundColor="DarkGreen">
+                    <Button Text="GRÁFICOS" x:Name="btnGraficos" />
+                </Frame>
+                <Label Text="Fuente: https://inta.gob.ar/sites/default/files/script-tmp-manual_cultivos_pro_huerta_-_cerbas.pdf"></Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+    
+</ContentPage>

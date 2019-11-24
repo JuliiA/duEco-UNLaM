@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="duEco.View.VerHuerta"
+             Title="Detalle Huerta">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#539539"/>
+                <Setter Property="WidthRequest" Value="220"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <ScrollView Grid.Row="0">
+            <StackLayout BackgroundColor="Transparent">
+                <Frame BackgroundColor="Transparent">
+                    <Button FontSize="Large" Text="&lt; Ver todas" x:Name="btnTodas" WidthRequest="50" BackgroundColor="Transparent" TextColor="DarkGray" BorderColor="DarkGray"/>
+                </Frame>
+                <Label x:Name="NombreHuerta" TextColor="#539539" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Label x:Name="DescripcionHuerta" TextColor="#539539" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+                    <Button Text="Editar" x:Name="btnEditar" BackgroundColor="LightSeaGreen" TextColor="WhiteSmoke" WidthRequest="100"/>
+                    <Button Text="Borrar" x:Name="btnBorrar" BackgroundColor="LightSeaGreen" TextColor="WhiteSmoke" WidthRequest="100"/>
+                                
+                <!-- Comienza listar Cultivos-->
+                <StackLayout VerticalOptions="StartAndExpand">
+                    <ListView ItemsSource="" BackgroundColor="Transparent" x:Name="lstCultivos" ItemSelected="LstCultivos_ItemSelected" RowHeight="100">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell Height="200">
+                                    <StackLayout BackgroundColor="#ECFCF4" Margin="10,0">
+                                        <!--<StackLayout Orientation="Horizontal">-->
+                                            <Label Text="{Binding NombreCultivo }"/>
+                                            <Label Text="{Binding descripcion}"/>
+                                            <ProgressBar x:Name="pgbar" Progress="{Binding porcentaje}" BackgroundColor="Transparent" ProgressColor="DarkOrange"/>
+                                        <!--</StackLayout>-->
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>                    
+                </StackLayout>
+                <!---->
+            </StackLayout>
+        </ScrollView>
+            
+         <Button Grid.Row="0" Text="+ Cultivo" x:Name="btnAgregar" BorderColor="#2b3c3c" BorderWidth="1" FontAttributes="Bold" BackgroundColor="#4ba862" BorderRadius="35" TextColor="White" HorizontalOptions="End" WidthRequest="160" HeightRequest="70" Margin="0,0,10,12" VerticalOptions="End"/>
+
+       </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="duEco.View.VerAlerta"
+             Title="Detalle Alerta">
+            <Page.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Button">
+                        <Setter Property="BackgroundColor" Value="MediumSeaGreen"/>
+                        <Setter Property="TextColor" Value="White"/>
+                        <Setter Property="BorderRadius" Value="5"/>
+                    </Style>
+
+                    <Style TargetType="Label">
+                        <Setter Property="TextColor" Value="#539539"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                        <Setter Property="FontSize" Value="Medium"/>
+                    </Style>
+                </ResourceDictionary>
+            </Page.Resources>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="Transparent">
+                <TableView>
+                    <TableRoot>
+                        <TableSection>
+                            
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Label  x:Name="lblFechaAlerta"
+                                            Text="Fecha Alerta"               
+                                            VerticalOptions="CenterAndExpand" />
+                                    <DatePicker x:Name="dtpFechaAlerta"                                                 
+                                                VerticalOptions="CenterAndExpand" 
+                                                HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                            </ViewCell>
+
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Label x:Name="lblHoraAlerta"
+                                                    Text="Hora Alerta"                         
+                                                    VerticalOptions="CenterAndExpand"/>
+                                    <TimePicker x:Name="tmpHora"
+                                                        VerticalOptions="CenterAndExpand" 
+                                                        HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                            </ViewCell>
+
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Label x:Name="lblDescripcion"
+                                                    Text="Descripción"                         
+                                                    VerticalOptions="CenterAndExpand"/>
+                                    <Entry  x:Name="txtDescripcion" 
+                                                    Placeholder="(e.g. Regar Menta)" 
+                                                    VerticalOptions="CenterAndExpand" 
+                                                    HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                            </ViewCell>
+
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Label x:Name="lblNotificacion"
+                                                    Text="Envía Notificación"                         
+                                                    VerticalOptions="CenterAndExpand"/>
+                                    <Switch x:Name="chkAvisa"
+                                                    IsToggled="True" 
+                                                    VerticalOptions="CenterAndExpand" 
+                                                    HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                            </ViewCell>
+
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Label x:Name="lblTipoAlerta"
+                                                    Text="Tipo de Alerta"                         
+                                                    VerticalOptions="CenterAndExpand"/>
+                                    <Picker x:Name="cmbTipoAlerta"
+                                                    Title="(e.g. Fundamental)" 
+                                                    VerticalOptions="CenterAndExpand" 
+                                                    HorizontalOptions="EndAndExpand"
+                                                    ItemDisplayBinding="{Binding Descripcion}"/>
+                                </StackLayout>
+                            </ViewCell>
+                            
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Label  x:Name="lblHuerta"
+                                            Text="Huerta Seleccionada"                         
+                                            VerticalOptions="CenterAndExpand"/>
+
+                                    <Entry  x:Name="txtHuerta" 
+                                            IsEnabled="False"
+                                            VerticalOptions="CenterAndExpand" 
+                                            HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                            </ViewCell>
+
+                            <!--BOTONES-->
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="13,0">
+                                    <Button x:Name="btnHabilitaEdicion" 
+                                            Text="Editar" 
+                                            VerticalOptions="CenterAndExpand" 
+                                            Clicked="BtnHabilitaEdicion_Clicked"/>
+
+                                    <Button x:Name="btnEditarAlerta" 
+                                            Text="Confirmar Edición" 
+                                            VerticalOptions="CenterAndExpand" 
+                                            Clicked="BtnEditarAlerta_Clicked"/>
+
+                                    <Button x:Name="btnEliminarAlerta" 
+                                            Text="Eliminar" 
+                                            HorizontalOptions="EndAndExpand" 
+                                            VerticalOptions="CenterAndExpand" 
+                                            Clicked="BtnEliminarAlerta_Clicked"/>   
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
